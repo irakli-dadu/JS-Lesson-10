@@ -1,2 +1,2 @@
-# JS-Lesson-10
-slides and validation part(1)
+# JS-Lesson-6
+burgerbar + input thingZZz
