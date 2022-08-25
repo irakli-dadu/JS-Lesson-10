@@ -105,4 +105,37 @@ allusers()
 
 // slider content------------------------------------------
 
+const nextEl = document.querySelector(".next")
 
+const prevEl = document.querySelector(".prev")
+
+const imageContainerEl = document.querySelector(".image-container")
+
+const allImgsEl = document.querySelector("img")
+
+let currentImg = 1
+
+
+nextEl.addEventListener("click", ()=>{
+    currentImg++
+    updateImg()
+})
+
+prevEl.addEventListener("click", ()=> {
+    currentImg--
+    updateImg()
+})
+
+function updateImg() {
+    if(currentImg > allImgsEl.length) {
+        currentImg = 1
+    }else if(currentImg < 1) {
+        currentImg = allImgsEl.length
+    }
+    imageContainerEl.style.transform = `translateX(-${(currentImg -1) * 700}px)`
+
+    // setTimeout(() => {
+    //     currentImg++
+    //     updateImg()
+    // }, 4000);
+}
